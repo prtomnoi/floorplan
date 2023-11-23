@@ -17,7 +17,7 @@
   </head>
 
   <body class="">
-    <main class="overflow-x-auto py-2 px-5">
+    <main class=" py-2 px-5" >
       <div class="plan-layout">
         <div>
           <div class="zone-c mb-1">
@@ -806,7 +806,9 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">โต๊ะ <span></span></h1>
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              โต๊ะ <span></span>
+            </h1>
             <button
               type="button"
               class="btn-close"
@@ -814,50 +816,80 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
-            <form>
+          <form id="form-reserve">
+            <div class="modal-body">
               <div class="form-check mb-3">
-                <input class="form-check-input" type="radio" name="status" id="flexRadioDefault1">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="status"
+                  id="flexRadioDefault1"
+                  value="a"
+                />
                 <label class="form-check-label" for="flexRadioDefault1">
                   โต๊ะว่าง
                 </label>
               </div>
               <div class="form-check mb-3">
-                <input class="form-check-input" type="radio" name="status" id="flexRadioDefault2">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="status"
+                  id="flexRadioDefault2"
+                  value="b"
+                />
                 <label class="form-check-label" for="flexRadioDefault2">
                   จองแล้ว (สีเทา)
                 </label>
               </div>
               <div class="form-check mb-3">
-                <input class="form-check-input" type="radio" name="status" id="flexRadioDefault3">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="status"
+                  id="flexRadioDefault3"
+                  value="p1"
+                />
                 <label class="form-check-label" for="flexRadioDefault3">
-                  Premium 1 (สีเขียว) 
+                  Premium 1 (สีเขียว)
                 </label>
               </div>
               <div class="form-check mb-3">
-                <input class="form-check-input" type="radio" name="status" id="flexRadioDefault4">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="status"
+                  id="flexRadioDefault4"
+                  value="p2"
+                />
                 <label class="form-check-label" for="flexRadioDefault4">
                   Premium 2 (สีน้ำเงิน)
                 </label>
               </div>
               <div class="form-check mb-3">
-                <input class="form-check-input" type="radio" name="status" id="flexRadioDefault5">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="status"
+                  id="flexRadioDefault5"
+                  value="p3"
+                />
                 <label class="form-check-label" for="flexRadioDefault5">
-                  Premium 3 (สีม่วง) 
+                  Premium 3 (สีม่วง)
                 </label>
               </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              ปิด
-            </button>
-            <button type="button" class="btn btn-primary">บันทึก</button>
-          </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                ปิด
+              </button>
+              <button type="submit" class="btn btn-primary">บันทึก</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -867,10 +899,12 @@
     <script>
       const tableEl = document.querySelectorAll(".table");
       const tableLEl = document.querySelectorAll(".table-l");
+      const radioEl = document.querySelectorAll("input[name='status']");
+      const formEl = document.querySelector("#reserve-modal");
 
       document.addEventListener("DOMContentLoaded", function () {
         let myModal = new bootstrap.Modal(
-          document.getElementById("reserve-modal")
+          document.querySelector("#reserve-modal")
         );
 
         for (let i = 0; i < tableEl.length; i++) {
@@ -896,6 +930,41 @@
             modalTitle.textContent = tableID;
           });
         }
+
+        myModal._element.addEventListener("hidden.bs.modal", () => {
+          radioEl.forEach(function (radio) {
+            radio.checked = false;
+          });
+        });
+
+        formEl.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          let tableID = document.querySelector(".modal-title span").textContent;
+          const tableEl = document.querySelector(`[data-id="${tableID}"]`);
+
+          console.log(tableID);
+          console.log(tableEl);
+
+          let radioChecked = Array.from(radioEl).find((radio) => radio.checked);
+
+          console.log(radioChecked);
+
+          radioChecked.value == "p3"
+            ? tableEl.classList.add("p3")
+            : tableEl.classList.remove("p3");
+          radioChecked.value === "p2"
+            ? tableEl.classList.add("p2")
+            : tableEl.classList.remove("p2");
+          radioChecked.value === "p1"
+            ? tableEl.classList.add("p1")
+            : tableEl.classList.remove("p1");
+          radioChecked.value === "b"
+            ? tableEl.classList.add("reserve")
+            : tableEl.classList.remove("reserve");
+
+            myModal.hide()
+        });
       });
     </script>
   </body>

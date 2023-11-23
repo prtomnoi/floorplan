@@ -4,7 +4,6 @@
     display: grid;
     grid-template-columns: 61fr 20fr 10fr;
     gap: 10px;
-
     width: 1350px;
     min-width: 300px;
     margin: 0 auto;
@@ -37,6 +36,26 @@
     text-decoration: none;
 }
 
+.table.reserve {
+    background-color:#575B5C !important;
+    color: #fff !important;
+}
+
+.table.p1 {
+    background-color: green !important;
+    color: #fff !important;
+}
+
+.table.p2 {
+    background-color: blue !important;
+    color: #fff !important;
+}
+
+.table.p3 {
+    background-color: purple !important;
+    color: #fff !important;
+}
+
 .table-l:link,
 .table-l:visited {
     aspect-ratio: 1 / 2;
@@ -46,6 +65,26 @@
 
     text-align: center;
     text-decoration: none;
+}
+
+.table-l.reserve {
+    background-color:#575B5C !important;
+    color: #fff !important;
+}
+
+.table-l.p1 {
+    background-color: green !important;
+    color: #fff !important;
+}
+
+.table-l.p2 {
+    background-color: blue !important;
+    color: #fff !important;
+}
+
+.table-l.p3 {
+    background-color: purple !important;
+    color: #fff !important;
 }
 
 .empty-box {
@@ -134,19 +173,23 @@
 
 .zone-c .table,
 .zone-c .table-l {
-    border: 1px solid #D3722E;
+    /* border: 1px solid #D3722E;
     background-color: #F99120;
-    color: #fff;
+    color: #fff; */
+    border: 1px solid #D3722E;
+    background-color: #fff;
+    color: #3E3E3E;
 }
 
 
 .wrap-zone {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(5, auto);
     grid-column-gap: 0px;
     grid-row-gap: 5px;
-    height: 627px;
+    /* height: 627px; */
+    height: fit-content;
 }
 
 /* ZONE B */
@@ -170,10 +213,12 @@
 
 .zone-b .table,
 .zone-b .table-l {
-    border: 1px solid #098E3F;
+    /* border: 1px solid #098E3F;
     background-color: #00A650;
-    color: #fff;
-
+    color: #fff; */
+    border: 1px solid #098E3F;
+    background-color: #fff;
+    color: #3E3E3E;
 }
 
 /* ZONE A */
@@ -186,7 +231,7 @@
     background-color: #8F8F8F;
     margin-left: 90px;
     position: relative;
-
+    height: fit-content;
 }
 
 .zone-a .zone-title {
@@ -197,9 +242,13 @@
 
 .zone-a .table,
 .zone-a .table-l {
+    /* border: 1px solid #6D6A65;
+    background-color: #fff;
+    color: #6D6A65; */
+
     border: 1px solid #6D6A65;
     background-color: #fff;
-    color: #6D6A65;
+    color: #3E3E3E;
 
 }
 
@@ -233,6 +282,7 @@
     border-bottom: 8px solid #fff;
     position: relative;
     padding: 10px;
+    height: 400px;
 }
 
 .zone-vvip .zone-title {
@@ -256,9 +306,13 @@
 
 .zone-vvip .table,
 .zone-vvip .table-l {
-    border: 1px solid #0261A5;
+    /* border: 1px solid #0261A5;
     background-color: #1C74BE;
-    color: #fff;
+    color: #fff; */
+
+    border: 1px solid #0261A5;
+    background-color: #fff;
+    color: #3E3E3E;
 
 }
 
