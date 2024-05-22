@@ -283,7 +283,7 @@
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: repeat(8, 1fr);
-    column-gap: 17px;
+    column-gap: 11px;
     row-gap: 9px;
 }
 
@@ -420,8 +420,8 @@
 
 .sit-bar-right {
     position: absolute;
-    top: 11px;
-    right: 114px;
+    top: 0;
+    right: 107px;
 }
 
 .sit-bar-right .sit-bar {
