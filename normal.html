@@ -9,7 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-  <link rel="stylesheet" href="css/style_normal.css" />
+  <link rel="stylesheet" href="css/bprangsit-styles.css" />
+  <link rel="stylesheet" href="css/default-floorplan.css" />
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 
@@ -27,56 +28,44 @@
           <div>
             <div class="table-layout pt-5 ps-4 pe-3 pb-2">
               <div class="box">
-                <a href="#" class="table" :class="['table', { booked: isActive('V6') }]"
-                  @click="handleTableClick('V6')">V6</a>
+                  <table-item table="v6" @handle-table="handleTableClick"></table-item>
               </div>
               <div class="box">
-                <a href="#" class="table" :class="['table', { booked: isActive('V7') }]"
-                  @click="handleTableClick('V7')">V7</a>
+                <table-item table="v7" @handle-table="handleTableClick"></table-item>
               </div>
               <div class="box">
-                <a href="#" class="table" :class="['table', { booked: isActive('V8') }]"
-                  @click="handleTableClick('V8')">V8</a>
+                <table-item table="v8" @handle-table="handleTableClick"></table-item>
               </div>
               <div class="box">
-                <a href="#" class="table" :class="['table', { booked: isActive('V9') }]"
-                  @click="handleTableClick('V9')">V9</a>
+                <table-item table="v9" @handle-table="handleTableClick"></table-item>
               </div>
               <div class="box">
-                <a href="#" class="table" :class="['table', { booked: isActive('V10') }]"
-                  @click="handleTableClick('V10')">V10</a>
+                <table-item table="v10" @handle-table="handleTableClick"></table-item>
               </div>
               <div class="box">
-                <a href="#" class="table" :class="['table', { booked: isActive('V11') }]"
-                  @click="handleTableClick('V11')">V11</a>
+                <table-item table="v11" @handle-table="handleTableClick"></table-item>
               </div>
               <div class="box">
-                <a href="#" class="table" :class="['table', { booked: isActive('V1') }]"
-                  @click="handleTableClick('V1')">V1</a>
+                <table-item table="v1" @handle-table="handleTableClick"></table-item>
               </div>
               <div class="box">
-                <a href="#" class="table" :class="['table', { booked: isActive('V2') }]"
-                  @click="handleTableClick('V2')">V2</a>
+                <table-item table="v2" @handle-table="handleTableClick"></table-item>
               </div>
               <div class="box">
-                <a href="#" class="table" :class="['table', { booked: isActive('V3') }]"
-                  @click="handleTableClick('V3')">V3</a>
+                <table-item table="v3" @handle-table="handleTableClick"></table-item>
               </div>
               <div class="box">
-                <a href="#" class="table" :class="['table', { booked: isActive('V4') }]"
-                  @click="handleTableClick('V4')">V4</a>
+                <table-item table="v4" @handle-table="handleTableClick"></table-item>
               </div>
               <div class="box">
-                <a href="#" class="table" :class="['table', { booked: isActive('V5') }]"
-                  @click="handleTableClick('V5')">V5</a>
+               <table-item table="v5" @handle-table="handleTableClick"></table-item>
               </div>
             </div>
 
           </div>
           <div class="zone-vip-last">
             <div class="box">
-              <a href="#" class="table" :class="['table', { booked: isActive('V12') }]"
-                @click="handleTableClick('V12')">V12</a>
+              <table-item table="v12" @handle-table="handleTableClick"></table-item>
             </div>
             <div style="position: relative;">
               <div class="zone-title">ZONE VIP</div>
@@ -1193,284 +1182,58 @@
       </div>
     </div>
   </main>
-
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 </body>
 <script>
-  new Vue({
-    el: '#app',
-    data: {
-      bookingInfo: {
-        date: "2023-12-11",
-        tables: [
-          // {"table": "A1"},
-          // {"table": "A2"},
-          // {"table": "A3"},
-          // {"table": "A4"},
-          // {"table": "A5"},
-          // {"table": "A6"},
-          // {"table": "A7"},
-          // {"table": "A8"},
-          // {"table": "A9"},
-          // {"table": "A10"},
-          // {"table": "A11"},
-          // {"table": "A12"},
-          // {"table": "A13"},
-          // {"table": "A14"},
-          // {"table": "A15"},
-          // {"table": "A16"},
-          // {"table": "A17"},
-          // {"table": "A18"},
-          // {"table": "A19"},
-          // {"table": "A20"},
-          // {"table": "A21"},
-          // {"table": "A22"},
-          // {"table": "A23"},
-          // {"table": "A24"},
-          // {"table": "A25"},
-          // {"table": "A26"},
-          // {"table": "A27"},
-          // {"table": "A28"},
-          // {"table": "A29"},
-          // {"table": "A30"},
-          // {"table": "A31"},
-          // {"table": "A32"},
-          // {"table": "A33"},
-          // {"table": "A34"},
-          // {"table": "A35"},
-          // {"table": "A36"},
-          // {"table": "A37"},
-          // {"table": "A38"},
-          // {"table": "A39"},
-          // {"table": "A40"},
-          // {"table": "A41"},
-          // {"table": "A42"},
-          // {"table": "A43"},
-          // {"table": "A44"},
-          // {"table": "A45"},
-          // {"table": "A46"},
-          // {"table": "A47"},
-          // {"table": "A48"},
-          // {"table": "A49"},
-          // {"table": "A50"},
-          // {"table": "A51"},
-          // {"table": "A52"},
-          // {"table": "A53"},
-          // {"table": "A54"},
-          // {"table": "A55"},
-          // {"table": "A56"},
-          // {"table": "A57"},
-          // {"table": "A58"},
-          // {"table": "A59"},
-          // {"table": "A60"},
-          // {"table": "A61"},
-          // {"table": "A62"},
-          // {"table": "A63"},
-          // {"table": "A64"},
-          // {"table": "A65"},
-          // {"table": "A66"},
-          // {"table": "A67"},
-          // {"table": "A68"},
-          // {"table": "A69"},
-          // {"table": "A70"},
-          // {"table": "A71"},
-          // {"table": "A72"},
-          // {"table": "A73"},
-          // {"table": "A74"},
-          // {"table": "A75"},
-          // {"table": "A76"},
-          // {"table": "A77"},
-          // {"table": "A78"},
-          // {"table": "A79"},
-          // {"table": "A80"},
-          // {"table": "A81"},
-          // {"table": "A82"},
-          // {"table": "A83"},
-          // {"table": "A84"},
-          // {"table": "A85"},
-          // {"table": "A86"},
-          // {"table": "A87"},
-          // {"table": "A88"},
-          // {"table": "A89"},
-          // {"table": "A90"},
-          // {"table": "A91"},
-          // {"table": "A92"},
-          // {"table": "A93"},
-          // {"table": "A94"},
-          // {"table": "A95"},
-          // {"table": "A96"},
-          // {"table": "B1"},
-          // {"table": "B2"},
-          // {"table": "B3"},
-          // {"table": "B4"},
-          // {"table": "B5"},
-          // {"table": "B6"},
-          // {"table": "B7"},
-          // {"table": "B8"},
-          // {"table": "B9"},
-          // {"table": "B10"},
-          // {"table": "B11"},
-          // {"table": "B12"},
-          // {"table": "B13"},
-          // {"table": "B14"},
-          // {"table": "B15"},
-          // {"table": "B16"},
-          // {"table": "B17"},
-          // {"table": "B18"},
-          // {"table": "B19"},
-          // {"table": "B20"},
-          // {"table": "B21"},
-          // {"table": "B22"},
-          // {"table": "B23"},
-          // {"table": "B24"},
-          // {"table": "B25"},
-          // {"table": "B26"},
-          // {"table": "B27"},
-          // {"table": "B28"},
-          // {"table": "B29"},
-          // {"table": "B30"},
-          // {"table": "B31"},
-          // {"table": "B32"},
-          // {"table": "B33"},
-          // {"table": "B34"},
-          // {"table": "B35"},
-          // {"table": "B36"},
-          // {"table": "B37"},
-          // {"table": "B38"},
-          // {"table": "B39"},
-          // {"table": "B40"},
-          // {"table": "B41"},
-          // {"table": "C1"},
-          // {"table": "C2"},
-          // {"table": "C3"},
-          // {"table": "C4"},
-          // {"table": "C5"},
-          // {"table": "C6"},
-          // {"table": "C7"},
-          // {"table": "C8"},
-          // {"table": "C9"},
-          // {"table": "C10"},
-          // {"table": "C11"},
-          // {"table": "C12"},
-          // {"table": "C13"},
-          // {"table": "C14"},
-          // {"table": "C15"},
-          // {"table": "C16"},
-          // {"table": "C17"},
-          // {"table": "C18"},
-          // {"table": "C19"},
-          // {"table": "C20"},
-          // {"table": "C21"},
-          // {"table": "C22"},
-          // {"table": "C23"},
-          // {"table": "C24"},
-          // {"table": "C25"},
-          // {"table": "C26"},
-          // {"table": "C27"},
-          // {"table": "C28"},
-          // {"table": "C29"},
-          // {"table": "C30"},
-          // {"table": "C31"},
-          // {"table": "C32"},
-          // {"table": "C33"},
-          // {"table": "C34"},
-          // {"table": "C35"},
-          // {"table": "C36"},
-          // {"table": "C37"},
-          // {"table": "C38"},
-          // {"table": "C39"},
-          // {"table": "C40"},
-          // {"table": "C41"},
-          // {"table": "C42"},
-          // {"table": "C43"},
-          // {"table": "C44"},
-          // {"table": "C45"},
-          // {"table": "C46"},
-          // {"table": "C47"},
-          // {"table": "C48"},
-          // {"table": "C49"},
-          // {"table": "C50"},
-          // {"table": "C51"},
-          // {"table": "C52"},
-          // {"table": "C53"},
-          // {"table": "C54"},
-          // {"table": "C55"},
-          // {"table": "C56"},
-          // {"table": "C57"},
-          // {"table": "C58"},
-          // {"table": "C59"},
-          // {"table": "C60"},
-          // {"table": "C61"},
-          // {"table": "C62"},
-          // {"table": "C63"},
-          // {"table": "C64"},
-          // {"table": "C65"},
-          // {"table": "C66"},
-          // {"table": "C67"},
-          // {"table": "C68"},
-          // {"table": "D1"},
-          // {"table": "D2"},
-          // {"table": "D3"},
-          // {"table": "D4"},
-          // {"table": "D5"},
-          // {"table": "D6"},
-          // {"table": "D7"},
-          // {"table": "E1"},
-          // {"table": "E2"},
-          // {"table": "E3"},
-          // {"table": "E4"},
-          // {"table": "E5"},
-          // {"table": "E6"},
-          // {"table": "E7"},
-          // {"table": "E8"},
-          { "table": "E9" },
-          { "table": "E10" },
-          { "table": "E11" },
-          { "table": "E12" },
-          { "table": "E13" },
-          { "table": "E14" },
-          { "table": "F1" },
-          { "table": "F2" },
-          { "table": "F3" },
-          { "table": "F4" },
-          { "table": "F5" },
-          { "table": "S1" },
-          // {"table": "S2"},
-          // {"table": "S3"},
-          // {"table": "S4"},
-          // {"table": "S5"},
-          // {"table": "S6"},
-          // {"table": "S7"},
-          // {"table": "S8"},
-          // {"table": "VVIP1"},
-          // {"table": "VVIP2"},
-          // {"table": "VVIP3"},
-          // {"table": "VVIP4"},
-          // {"table": "VVIP5"},
-          // {"table": "VVIP6"},
-          // {"table": "VVIP7"},
-          // {"table": "VVIP8"},
-          // {"table": "VVIP9"},
-          // {"table": "VVIP10"},
-
-        ]
-      }
+ const { createApp, ref } = Vue;
+const coreData = Vue.reactive({
+    tables: []
+});
+const app = createApp({
+    setup() { return { coreData } },
+    data() {
+        return {
+            tables: []
+        };
     },
     methods: {
-      isActive(table) {
-        return this.bookingInfo.tables.some(bookedTable => bookedTable.table === table);
+        handleTableClick(_table) {
+            console.log("Table clicked:", _table);
+         
+        },
+        isActive(table) {
+        // return this.bookingInfo.tables.some(bookedTable => bookedTable.table === table);
       },
-      handleTableClick(table) {
-        console.log("Table clicked:", table);
-      },
-      // tableClass( _table ) {
-      //   return ['table', { booked: this.isActive('VVIP9') }];
-      // }
     },
+    mounted() {
+        console.log('mounted iframe table floorplan');
 
-  });
+    },
+});
+app.component('table-item', {
+    setup() { return { coreData } },
+    props: {
+        'table': { type: String, required: true },
+        "tableSize": { type: String },
+        'html': { type: String }
+    },
+    computed: {
+        display() {
+            return this.html || this.table;
+        },
+        tableData() {
+            return coreData.tables.find(table => table.table === this.table);
+        },
+        tableClass() {
+            return [{ booked: this.tableData ? 1 : 0 }, this.tableData?.class, this.tableSize]
+        },
+    },
+    template: `<div class="table" :class="tableClass" @click="$emit('handleTable', table)" v-html="display"></div>`,
+})
+const main = app.mount('#app');
 </script>
 
 </html>

@@ -1,0 +1,67 @@
+
+.booked {
+    color: red;
+    background-color: #cccccc;
+}
+
+.table {
+    border: 1px solid #3E3E3E; 
+    background-color: #fff;
+    color: #3E3E3E;
+}
+
+.table.reserve {
+    background-color: #575B5C !important;
+    color: #fff !important;
+}
+
+.table.p0 {
+    background-color: #82c774 !important;
+    color: #fff !important;
+}
+
+.table.p1 {
+    background-color: #008000 !important;
+    color: #fff !important;
+}
+
+.table.p2 {
+    background-color: #0000ff !important;
+    color: #fff !important;
+}
+
+.table.p3 {
+    background-color: #800080 !important;
+    color: #fff !important;
+}
+
+.table.p99 {
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.table.removing {
+    border-color: #f00 !important;
+    border-width: 3px !important;
+}
+
+.table.editing {
+    border-color: #0F0 !important;
+    border-width: 3px !important;
+}
+
+.table.foodorder-active {
+    background-color: #28a745 !important;
+    color: #fff !important;
+    border-width: 3px !important;
+}
+.table.foodorder-open {
+    background-color: #007bff !important;
+    color: #fff !important;
+    border-width: 3px !important;
+}
