@@ -288,7 +288,7 @@
 }
 
 .zone-b .table-layout .box {
-    background: #f65e85;
+    /* background: #f65e85; */
     padding: 2px;
 }
 
@@ -311,7 +311,7 @@
 }
 
 .zone-b-left .box {
-    background: #f65e85;
+    /* background: #f65e85; */
     padding: 2px;
     max-width: 30px;
     text-align: center;
@@ -338,7 +338,7 @@
 }
 
 .zone-b-left2 .box {
-    background: #f65e85;
+    /* background: #f65e85; */
     padding: 2px;
     max-width: 30px;
     text-align: center;
@@ -384,7 +384,7 @@
 }
 
 .zone-c .table-layout .box {
-    background: #8d7972;
+    /* background: #8d7972; */
     padding: 2px;
 }
 
@@ -412,7 +412,7 @@
 }
 
 .sit-bar {
-    width: 11px;
+    width: 13px;
     height: 11px;
     border: 1px solid black;
     margin-right: 5px;
@@ -421,7 +421,7 @@
 .sit-bar-right {
     position: absolute;
     top: 0;
-    right: 107px;
+    right: 130px;
 }
 
 .sit-bar-right .sit-bar {
