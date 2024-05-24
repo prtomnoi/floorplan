@@ -408,21 +408,22 @@
     text-align: center;
     text-transform: uppercase;
     display: flex;
-    width: 70%;
-    height: 100%;
+    width: 78%;
+    height: 150px;
 }
 
 .sit-bar {
-    width: 13px;
-    height: 11px;
+    width: 21px;
+    height: 26px;
     border: 1px solid black;
     margin-right: 5px;
+    text-align: center;
 }
 
 .sit-bar-right {
     position: absolute;
     top: 0;
-    right: 130px;
+    right: 90px;
 }
 
 .sit-bar-right .sit-bar {
@@ -431,14 +432,14 @@
 
 .popcon {
     position: absolute;
-    top: 30px;
-    right: 50px;
+    top: 57px;
+    right: 0px;
     border: 1px solid black;
 }
 
 .popcon img {
-    width: 54px;
-    height: 54px;
+    width: 82px;
+    height: 90px;
 }
 
 .toilet {
@@ -474,6 +475,7 @@
     text-transform: uppercase;
     width: 100%;
     padding: 25px;
+    height: 408px;
 }
 
 .zone-title {
