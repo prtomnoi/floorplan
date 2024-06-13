@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>Rangsit</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="cafe-styles.css" />
+    <link rel="stylesheet" href="default-floorplan.css" />
+</head>
+
+<body>
+    <main class="py-2 px-5 " id="app">
+        <div class="plan-layout">
+            <div>
+                <div class="stage">
+                    <div class="zone-stage">
+                        <p>STAGE</p>
+                    </div>
+                    <div class="section-stage">
+                        <div class="stage-1">
+                            <div class="zone-vip">
+                                <div class="table-layout pt-5 ps-4 pe-3 pb-5">
+                                    <div class="box Horizontal">
+                                        <table-item table="V3" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box Horizontal">
+                                        <table-item table="V5" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="V2" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box v4">
+                                        <table-item table="V4" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="V1" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="stage-2">
+                            <div class="zone-b">
+                                <div class="table-layout pt-5 ps-4 pe-3 pb-5">
+                                    <div class="box">
+                                        <table-item table="B1" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="B2" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="B3" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="B4" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="B5" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zone-a">
+                                <div class="table-layout pt-5 ps-4 pe-3 pb-5">
+                                    <div class="box">
+                                        <table-item table="A3" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A6" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A9" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A12" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A14" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A16" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A2" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A5" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A8" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A11" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A13" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A15" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A1" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A4" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A7" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="A10" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="zone-bar">
+                                <div class="table-layout pt-5 ps-4 pe-3 pb-5">
+                                    <div class="box">
+                                        <table-item table="BAR1" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="BAR2" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="BAR3" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                    <div class="box">
+                                        <table-item table="BAR4" @handle-table="handleTableClick"></table-item>
+                                    </div>
+                                </div>
+                                <div class="popcon">
+                                    <img src="8059.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="cafe">
+                    CAFE
+                </div>
+                <div class="entrance mt-2">
+                    <div class="d-grid">
+                        <p class="mb-0 text-center w-100">ENTRANCE</p>
+                    </div>
+                    <div class="d-grid">
+                        <p class="mb-0"><i class="bi bi-caret-right text-white"></i><br><i
+                                class="bi bi-caret-left text-white"></i></p>
+                    </div>
+                </div>
+                <div class="toilet mt-5">
+                    <div class="road">
+                        <div class="road-vertical-1">
+                            <div class="line-vertical"></div>
+                        </div>
+                        <div class="road-horizontal">
+                            <div class="line"></div>
+                        </div>
+                        <div class="road-vertical-2">
+                            <div class="line-vertical"></div>
+                        </div>
+                    </div>
+                    <div class="men pt-5">
+                      <div class="men-bg" style="margin: auto;">
+                        <i class="bi bi-person-standing toilet-icon text-white" style="font-size: 110px;"></i>
+                        <div class="toilet-text text-white text-center" style="font-size: 32px;">MEN</div>
+                      </div>
+                    </div>
+                    <div class="women">
+                      <div style="margin: auto;">
+                        <i class="bi bi-person-standing-dress toilet-icon text-white" style="font-size: 110px;"></i>
+                        <div class="toilet-text text-white text-center" style="font-size: 24px;">WOMEN</div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        const { createApp, ref } = Vue;
+        const coreData = Vue.reactive({
+            tables: []
+        });
+        const app = createApp({
+            setup() { return { coreData } },
+            data() {
+                return {
+                    tables: []
+                };
+            },
+            methods: {
+                handleTableClick(_table) {
+                    console.log("Table clicked:", _table);
+
+                },
+                isActive(table) {
+                    // return this.bookingInfo.tables.some(bookedTable => bookedTable.table === table);
+                },
+            },
+            mounted() {
+                console.log('mounted iframe table floorplan');
+
+            },
+        });
+        app.component('table-item', {
+            setup() { return { coreData } },
+            props: {
+                'table': { type: String, required: true },
+                "tableSize": { type: String },
+                'html': { type: String }
+            },
+            computed: {
+                display() {
+                    return this.html || this.table;
+                },
+                tableData() {
+                    return coreData.tables.find(table => table.table === this.table);
+                },
+                tableClass() {
+                    return [{ booked: this.tableData ? 1 : 0 }, this.tableData?.class, this.tableSize]
+                },
+            },
+            template: `<div class="table" :class="tableClass" @click="$emit('handleTable', table)" v-html="display"></div>`,
+        })
+        const main = app.mount('#app');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,333 @@
+.plan-layout {
+    display: grid;
+    grid-template-columns: 15fr auto;
+    gap: 10px;
+    width: 800px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+.zone-stage {
+    position: absolute;
+    top: 165px;
+    left: -75px;
+    transform: rotate(-90deg);
+    background: #6d6e72;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    align-content: center;
+    color: white;
+    font-size: 42px;
+    z-index: 1;
+}
+
+.stage {
+    background: #ffba6d;
+    position: relative;
+}
+
+.section-stage {
+    display: grid;
+    grid-template-columns: 300px auto;
+    gap: 10px;
+}
+
+.stage-1 {
+    padding-left: 100px;
+    height: 100%;
+}
+
+.zone-vip .table-layout {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap: 30px;
+    column-gap: 40px;
+    max-width: 300px;
+    justify-content: center;
+    align-content: center;
+}
+
+.zone-vip .table-layout .box {
+    /* background: #fa951f; */
+    padding: 2px;
+    text-align: center;
+    height: 100%;
+    max-height: 80px;
+    width: 100%;
+    max-width: 26px;
+    justify-content: center;
+    margin: auto;
+}
+
+.zone-vip .table-layout .box.v4 {
+    grid-row: span 2;
+}
+
+.zone-vip .table-layout .box .table {
+    /* background: #fa951f; */
+    height: 60px;
+    width: 40px;
+    align-content: center;
+}
+
+.zone-vip .table-layout .box.Horizontal .table {
+    /* background: #fa951f; */
+    height: 40px;
+    width: 60px;
+    align-content: center;
+}
+
+.zone-vip .table-layout .box.none-data {
+    background: #ffba6d;
+    padding: 2px;
+}
+
+.zone-vip .table-layout .box a {
+    color: white;
+    padding: 2px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.zone-b {
+    max-height: 50px;
+}
+
+.zone-b .table-layout {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    row-gap: 30px;
+    column-gap: 40px;
+    justify-content: center;
+    align-content: center;
+}
+
+.zone-b .table-layout .box {
+    /* background: #fa951f; */
+    text-align: center;
+    max-height: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.zone-b .table-layout .box .table {
+    /* background: #fa951f; */
+    height: 100%;
+    width: 30px;
+    align-content: center;
+}
+
+.zone-b .table-layout .box.none-data {
+    background: #ffba6d;
+    padding: 2px;
+}
+
+.zone-b .table-layout .box a {
+    color: white;
+    padding: 2px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.zone-a {
+    max-height: 205px;
+}
+
+.zone-a .table-layout {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 30px;
+    column-gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.zone-a .table-layout .box {
+    /* background: #fa951f; */
+    text-align: center;
+    max-height: 30px;
+    width: 100%;
+    max-width: 30px;
+    justify-content: center;
+}
+
+.zone-a .table-layout .box .table {
+    /* background: #fa951f; */
+    height: 100%;
+    width: 30px;
+    align-content: center;
+}
+
+.zone-a .table-layout .box.none-data {
+    background: #ffba6d;
+    padding: 2px;
+}
+
+.zone-a .table-layout .box a {
+    color: white;
+    padding: 2px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.zone-bar .table-layout {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(30px, 1fr));
+    row-gap: 30px;
+    column-gap: 40px;
+    justify-content: center;
+    align-content: center;
+}
+
+.zone-bar .table-layout .box {
+    /* background: #fa951f; */
+    text-align: center;
+    max-height: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.zone-bar .table-layout .box .table {
+    /* background: #fa951f; */
+    height: 50px;
+    width: 50px;
+    align-content: center;
+    border-radius: 50%;
+}
+
+.zone-bar .table-layout .box.none-data {
+    background: #ffba6d;
+    padding: 2px;
+}
+
+.zone-bar .table-layout .box a {
+    color: white;
+    padding: 2px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.popcon {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    border: 1px solid black;
+}
+
+.popcon img {
+    width: 82px;
+    height: 90px;
+}
+
+.cafe {
+    color: white;
+    background: saddlebrown;
+    text-align: center;
+    align-content: center;
+    font-size: 48px;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 280px;
+    width: 150px;
+    border-radius: 25px;
+}
+
+.entrance {
+    background: black;
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 250px;
+    padding: 9px;
+    height: 140px;
+    border-radius: 25px;
+}
+
+.toilet {
+    display: flex;
+}
+
+.toilet .men {
+    height: 300px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background: #63cdf4;
+    margin-top: 100px;
+    border: 1px solid #63cdf4;
+    border-radius: 25px;
+}
+
+.toilet .women {
+    height: 300px;
+    width: 200px;
+    background: #e66baa;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    border: 1px solid #e66baa;
+    border-radius: 25px;
+}
+
+.road {
+    position: relative;
+}
+
+.road-vertical-1 {
+    position: absolute;
+    top: -95px;
+    left: -114px;
+    height: 107px;
+    width: 50px;
+    background: red;
+}
+
+.road-horizontal {
+    position: absolute;
+    top: 0;
+    left: -114px;
+    height: 50px;
+    width: 210px;
+    background: red;
+}
+.line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: repeating-linear-gradient(to right,
+            white,
+            white 10px,
+            transparent 10px,
+            transparent 20px);
+    transform: translateY(-50%);
+}
+.line-vertical {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    background: repeating-linear-gradient(
+      to bottom,
+      white,
+      white 10px,
+      transparent 10px,
+      transparent 20px
+    );
+    transform: translateX(-50%);
+}
+
+.road-vertical-2 {
+    position: absolute;
+    top: 50px;
+    left: -70px;
+    height: 200px;
+    width: 50px;
+    background: red;
+}
